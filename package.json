@@ -5,8 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start -h 0.0.0.0 -p ${PORT:-8080}",
+    "lint": "next lint",
+    "export": "npm run build && next export && mv out _static"
   },
   "dependencies": {
     "next": "11.1.2",
